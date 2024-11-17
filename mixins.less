@@ -1,0 +1,25 @@
+.flex(@direction: row, @align: stretch, @justify: flex-start) {
+    display: flex;
+    flex-direction: @direction;
+    align-items: @align;
+    justify-content: @justify;
+}
+
+.font(@size, @weight: normal, @color: @black, @lineHeight: normal) {
+    font-size: @size;
+    font-weight: @weight;
+    color: @color;
+    line-height: @lineHeight;
+  }
+  
+  .background(@color: transparent, @image: none, @repeat: no-repeat, @size: cover, @position: center) {
+    background-color: @color;
+    background-image: @image;
+    background-repeat: @repeat;
+    background-size: @size;
+    background-position: @position;
+  }
+  
+  .space-between() {
+    justify-content: space-between;
+  }

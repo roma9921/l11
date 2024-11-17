@@ -1,0 +1,310 @@
+@import "variables.less";
+@import "mixins.less";
+
+u1 {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    width: 1366px;
+    height: 1269px;
+    margin: 0;
+    padding: 0;
+    font-family: @font-primary;
+    box-sizing: border-box;
+  }
+  
+  header {
+    .flex(row, center);
+    height: 91px;
+    .background(@white);
+    .space-between();
+  
+    .logo {
+      .flex(row, center);
+      width: 147px;
+      height: 23px;
+      margin-left: 100px;
+  
+      .icon_chip {
+        margin-right: 12px;
+      }
+    }
+  
+    .nav {
+      .flex(row);
+      padding-left: 0;
+      justify-content: space-between;
+      width: 588px;
+      margin-right: 100px;
+  
+      li {
+        a {
+          .font(16px, 400, @secondary-color);
+        }
+  
+        a.converter {
+          color: @primary-color;
+        }
+      }
+    }
+  
+    .account {
+      .flex(row);
+      margin-right: 87px;
+  
+      .icon_vector {
+        margin-right: 15px;
+      }
+  
+      a {
+        .font(16px, 400, @black);
+      }
+    }
+  }
+  
+  .chip_change {
+    .flex(row, space-between, center);  
+    background-image: url(img/background_blue.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    justify-content: space-between; 
+    padding: 20px; 
+  
+    .chip_change_description {
+      width: 50%; 
+      margin-left: 250px;
+  
+      h1 {
+        color: white;
+        font-size: 54px;
+        font-weight: 700;
+        margin-top: 85px;
+        width: 311px;
+        height: 59px;
+        margin-bottom: 0;
+      }
+  
+      p {
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 25px;
+      }
+  
+      a {
+        display: flex;
+        width: 234px;
+        height: 53px;
+        background: white;
+        border-radius: 4px;
+        color: grey;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 29px;
+      }
+    }
+
+    .currency_converter {
+      margin-left: 250px;
+      height: 554px;
+      background-color: white;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+  
+      .currency_converter_description {
+        h2 {
+          color: black;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 56px;
+          margin-top: 138px;
+          margin-bottom: 27px;
+        }
+  
+        p {
+          width: 379px;
+          height: 99px;
+          color: grey;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+        }
+  
+        a {
+          display: flex;
+          width: 251px;
+          height: 60px;
+          background: blue;
+          border-radius: 4px;
+          color: white;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 27px;
+        }
+      }
+    }
+
+    .mastercard_debit {
+      width: 341px;
+      height: 216px;
+      margin-right: 251px;
+      margin-top: 85px;
+      margin-bottom: 99px;
+    }
+  }
+
+  .black_card {
+    width: 436px;
+    height: 314px;
+    border-radius: 4px;
+    background-color: black;
+    margin-top: 85px;
+    margin-right: 20px; 
+    margin-bottom: 99px;
+  }
+
+
+footer {
+  .flex(row, center);
+  height: 224px;
+  .background(@white);
+  .space-between();
+
+  .address {
+    height: 84px;
+    margin: 53px 0 87px 98px;
+
+    .address_data_span {
+      .font(20px, 700, @black);
+      margin-left: 11px;
+    }
+
+    p {
+      .font(12px, 400, @secondary-color, 16.8px);
+    }
+  }
+
+  .navigation {
+    .flex(column, stretch, space-between);
+    gap: 6px;
+    margin: 60px 0;
+
+    li a {
+      .font(16px, 500, @secondary-color, 22.4px);
+    }
+  }
+
+
+}
+@media (max-width: 1024px) {
+    body {
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
+  
+    header {
+      .flex(column, center);
+      height: auto;
+      .space-between();
+  
+      .logo {
+        margin: 20px 0;
+      }
+  
+      .nav {
+        .flex(row, center);
+        width: 100%;
+        margin: 0;
+        gap: 20px;
+      }
+    }
+  
+    .chip_change {
+      .flex(column, center);
+      padding: 20px;
+      height: auto;
+      .space-between();
+    }
+  
+    footer {
+      .flex(column, center);
+      gap: 20px;
+      text-align: center;
+      .space-between();
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
+  
+    header {
+      .flex(column, center);
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .logo {
+      margin: 10px 0;
+    }
+  
+    .nav {
+      .flex(column, center);
+      gap: 3px;
+      margin: 0;
+    }
+  
+    .nav li a {
+      font-size: 14px;
+    }
+  
+    .chip_change {
+      .flex(column, center);
+      padding: 10px;
+      gap: 10px;
+      .space-between();
+    }
+  
+    .chip_change_description h1 {
+      .font(36px);
+    }
+  
+    .chip_change_description p {
+      .font(16px);
+    }
+  
+    .chip_change_description a {
+      width: 200px;
+      height: 45px;
+      font-size: 16px;
+    }
+  
+    .black_card {
+      display: none;
+    }
+  
+    footer {
+      .flex(column, center);
+      gap: 10px;
+      text-align: center;
+      padding: 20px;
+      .space-between();
+    }
+  }
+  
